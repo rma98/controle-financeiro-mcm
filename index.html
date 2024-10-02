@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Caixa - MCM</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/29dd473d90.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img src="nossasenhora.png" alt="Nossa Senhora" class="logo">
+        <h1><i class="fas fa-hand-holding-heart"></i> Controle de Caixa - Missão Colo de Mãe</h1>
+    </header>
+
+    <main>
+        <!-- Caixa atual -->
+        <section id="caixa-atual">
+            <h2>Saldo em Caixa: R$<span id="saldoCaixa">0.00</span></h2>
+        </section>
+
+        <!-- Histórico de transações -->
+        <section id="historico-transacoes">
+            <h2>Histórico de Transações</h2>
+            <ul id="historico-lista"></ul>
+        </section>
+
+        <section id="doacao">
+            <h2><i class="fas fa-donate"></i> Registrar Doação</h2>
+            <form id="doacao-form">
+                <label for="valorDoacao">Valor da Doação:</label>
+                <input type="number" id="valorDoacao" placeholder="Ex: 100.00" required>
+
+                <label for="comentarioDoacao">Comentário/Observação:</label>
+                <textarea id="comentarioDoacao" placeholder="Ex: Doação recebida de fulano" required></textarea>
+
+                <button type="submit"><i class="fas fa-save"></i> Salvar Doação</button>
+            </form>
+        </section>
+
+        <section id="gasto">
+            <h2><i class="fas fa-money-bill-wave"></i> Registrar Gasto</h2>
+            <form id="gasto-form">
+                <label for="valorGasto">Valor do Gasto:</label>
+                <input type="number" id="valorGasto" placeholder="Ex: 50.00" required>
+
+                <label for="motivoGasto">Motivo do Gasto:</label>
+                <textarea id="motivoGasto" placeholder="Ex: Compra de microfone" required></textarea>
+
+                <button type="submit"><i class="fas fa-save"></i> Salvar Gasto</button>
+            </form>
+        </section>
+
+        <section id="parcelamento">
+            <h2><i class="fas fa-credit-card"></i> Registrar Parcelamento</h2>
+            <form id="parcelamento-form">
+                <label for="descricaoCompra">Descrição da Compra:</label>
+                <input type="text" id="descricaoCompra" name="descricaoCompra" required>
+
+                <label for="parcelas">Número de Parcelas:</label>
+                <input type="number" id="parcelas" name="parcelas" min="1" required>
+
+                <label for="dataCompra">Data da Compra:</label>
+                <input type="text" id="dataCompra" name="dataCompra" placeholder="dd/mm/yyyy" required>
+
+                <button type="submit">Registrar Parcelamento</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
